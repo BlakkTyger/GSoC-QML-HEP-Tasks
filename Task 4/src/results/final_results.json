@@ -1,0 +1,27 @@
+{
+  "name": "optimized_final",
+  "config": {
+    "n_qubits": 5,
+    "n_layers": 3,
+    "encoding_type": "angle",
+    "entanglement": "circular",
+    "learning_rate": 0.05,
+    "batch_size": 16,
+    "epochs": 150,
+    "validation_split": 0.2,
+    "early_stopping_patience": 20
+  },
+  "train": {
+    "accuracy": 0.875,
+    "auc": 0.9263784461152883
+  },
+  "val": {
+    "accuracy": 0.9,
+    "auc": 0.8489583333333333
+  },
+  "test": {
+    "accuracy": 0.7,
+    "auc": 0.7656000000000001
+  },
+  "epochs_trained": 61
+}

@@ -1,0 +1,596 @@
+[
+  {
+    "name": "grid_0",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 1,
+      "encoding_type": "angle",
+      "entanglement": "none",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.7625,
+      "auc": 0.7926065162907268
+    },
+    "val": {
+      "accuracy": 0.75,
+      "auc": 0.7968749999999999
+    },
+    "test": {
+      "accuracy": 0.71,
+      "auc": 0.7016000000000001
+    },
+    "epochs_trained": 100
+  },
+  {
+    "name": "grid_1",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 1,
+      "encoding_type": "angle",
+      "entanglement": "linear",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.7375,
+      "auc": 0.7601010101010102
+    },
+    "val": {
+      "accuracy": 0.75,
+      "auc": 0.7857142857142858
+    },
+    "test": {
+      "accuracy": 0.7,
+      "auc": 0.7156000000000001
+    },
+    "epochs_trained": 86
+  },
+  {
+    "name": "grid_2",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 1,
+      "encoding_type": "angle",
+      "entanglement": "circular",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.6625,
+      "auc": 0.7838345864661654
+    },
+    "val": {
+      "accuracy": 0.75,
+      "auc": 0.8541666666666667
+    },
+    "test": {
+      "accuracy": 0.63,
+      "auc": 0.7015999999999999
+    },
+    "epochs_trained": 67
+  },
+  {
+    "name": "grid_3",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 1,
+      "encoding_type": "angle_rz",
+      "entanglement": "none",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.4875,
+      "auc": 0.49812382739212013
+    },
+    "val": {
+      "accuracy": 0.55,
+      "auc": 0.31313131313131315
+    },
+    "test": {
+      "accuracy": 0.5,
+      "auc": 0.38739999999999997
+    },
+    "epochs_trained": 17
+  },
+  {
+    "name": "grid_4",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 1,
+      "encoding_type": "angle_rz",
+      "entanglement": "linear",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.7625,
+      "auc": 0.7873671044402751
+    },
+    "val": {
+      "accuracy": 0.75,
+      "auc": 0.7171717171717172
+    },
+    "test": {
+      "accuracy": 0.71,
+      "auc": 0.7148
+    },
+    "epochs_trained": 100
+  },
+  {
+    "name": "grid_5",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 1,
+      "encoding_type": "angle_rz",
+      "entanglement": "circular",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.5125,
+      "auc": 0.5
+    },
+    "val": {
+      "accuracy": 0.45,
+      "auc": 0.41919191919191917
+    },
+    "test": {
+      "accuracy": 0.5,
+      "auc": 0.5096
+    },
+    "epochs_trained": 37
+  },
+  {
+    "name": "grid_6",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 2,
+      "encoding_type": "angle",
+      "entanglement": "none",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.75,
+      "auc": 0.7498436522826766
+    },
+    "val": {
+      "accuracy": 0.8,
+      "auc": 0.7777777777777777
+    },
+    "test": {
+      "accuracy": 0.71,
+      "auc": 0.6559999999999999
+    },
+    "epochs_trained": 100
+  },
+  {
+    "name": "grid_7",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 2,
+      "encoding_type": "angle",
+      "entanglement": "linear",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.75,
+      "auc": 0.7098186366479049
+    },
+    "val": {
+      "accuracy": 0.8,
+      "auc": 0.7373737373737373
+    },
+    "test": {
+      "accuracy": 0.71,
+      "auc": 0.6332
+    },
+    "epochs_trained": 97
+  },
+  {
+    "name": "grid_8",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 2,
+      "encoding_type": "angle",
+      "entanglement": "circular",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.5,
+      "auc": 0.5
+    },
+    "val": {
+      "accuracy": 0.5,
+      "auc": 0.5
+    },
+    "test": {
+      "accuracy": 0.5,
+      "auc": 0.5
+    },
+    "epochs_trained": 22
+  },
+  {
+    "name": "grid_9",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 2,
+      "encoding_type": "angle_rz",
+      "entanglement": "none",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.475,
+      "auc": 0.5808270676691729
+    },
+    "val": {
+      "accuracy": 0.6,
+      "auc": 0.5729166666666667
+    },
+    "test": {
+      "accuracy": 0.5,
+      "auc": 0.4644
+    },
+    "epochs_trained": 19
+  },
+  {
+    "name": "grid_10",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 2,
+      "encoding_type": "angle_rz",
+      "entanglement": "linear",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.7625,
+      "auc": 0.7832080200501254
+    },
+    "val": {
+      "accuracy": 0.75,
+      "auc": 0.8020833333333334
+    },
+    "test": {
+      "accuracy": 0.71,
+      "auc": 0.7568000000000001
+    },
+    "epochs_trained": 68
+  },
+  {
+    "name": "grid_11",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 2,
+      "encoding_type": "angle_rz",
+      "entanglement": "circular",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.8,
+      "auc": 0.8617221873035826
+    },
+    "val": {
+      "accuracy": 0.75,
+      "auc": 0.923076923076923
+    },
+    "test": {
+      "accuracy": 0.71,
+      "auc": 0.7856000000000001
+    },
+    "epochs_trained": 51
+  },
+  {
+    "name": "grid_12",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 3,
+      "encoding_type": "angle",
+      "entanglement": "none",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.5,
+      "auc": 0.36062500000000003
+    },
+    "val": {
+      "accuracy": 0.5,
+      "auc": 0.59
+    },
+    "test": {
+      "accuracy": 0.5,
+      "auc": 0.3092
+    },
+    "epochs_trained": 17
+  },
+  {
+    "name": "grid_13",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 3,
+      "encoding_type": "angle",
+      "entanglement": "linear",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.775,
+      "auc": 0.7944862155388471
+    },
+    "val": {
+      "accuracy": 0.7,
+      "auc": 0.6458333333333333
+    },
+    "test": {
+      "accuracy": 0.71,
+      "auc": 0.6791999999999999
+    },
+    "epochs_trained": 24
+  },
+  {
+    "name": "grid_14",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 3,
+      "encoding_type": "angle",
+      "entanglement": "circular",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.775,
+      "auc": 0.889375
+    },
+    "val": {
+      "accuracy": 0.8,
+      "auc": 0.85
+    },
+    "test": {
+      "accuracy": 0.71,
+      "auc": 0.7932
+    },
+    "epochs_trained": 27
+  },
+  {
+    "name": "grid_15",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 3,
+      "encoding_type": "angle_rz",
+      "entanglement": "none",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.4875,
+      "auc": 0.6166353971232019
+    },
+    "val": {
+      "accuracy": 0.55,
+      "auc": 0.30303030303030304
+    },
+    "test": {
+      "accuracy": 0.5,
+      "auc": 0.5780000000000001
+    },
+    "epochs_trained": 20
+  },
+  {
+    "name": "grid_16",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 3,
+      "encoding_type": "angle_rz",
+      "entanglement": "linear",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.675,
+      "auc": 0.6441525953721076
+    },
+    "val": {
+      "accuracy": 0.6,
+      "auc": 0.6717171717171716
+    },
+    "test": {
+      "accuracy": 0.67,
+      "auc": 0.6796
+    },
+    "epochs_trained": 23
+  },
+  {
+    "name": "grid_17",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 3,
+      "encoding_type": "angle_rz",
+      "entanglement": "circular",
+      "learning_rate": 0.05,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.8375,
+      "auc": 0.9116907605279698
+    },
+    "val": {
+      "accuracy": 0.8,
+      "auc": 0.9010989010989011
+    },
+    "test": {
+      "accuracy": 0.66,
+      "auc": 0.7784
+    },
+    "epochs_trained": 57
+  },
+  {
+    "name": "lr_18",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 2,
+      "encoding_type": "angle",
+      "entanglement": "linear",
+      "learning_rate": 0.01,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.75,
+      "auc": 0.7116948092557848
+    },
+    "val": {
+      "accuracy": 0.8,
+      "auc": 0.8181818181818181
+    },
+    "test": {
+      "accuracy": 0.71,
+      "auc": 0.6704
+    },
+    "epochs_trained": 100
+  },
+  {
+    "name": "lr_19",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 2,
+      "encoding_type": "angle",
+      "entanglement": "linear",
+      "learning_rate": 0.1,
+      "batch_size": 16,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.5,
+      "auc": 0.5
+    },
+    "val": {
+      "accuracy": 0.5,
+      "auc": 0.5
+    },
+    "test": {
+      "accuracy": 0.5,
+      "auc": 0.5
+    },
+    "epochs_trained": 32
+  },
+  {
+    "name": "bs_20",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 2,
+      "encoding_type": "angle",
+      "entanglement": "linear",
+      "learning_rate": 0.05,
+      "batch_size": 8,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.725,
+      "auc": 0.7023139462163852
+    },
+    "val": {
+      "accuracy": 0.9,
+      "auc": 0.9898989898989898
+    },
+    "test": {
+      "accuracy": 0.71,
+      "auc": 0.6514
+    },
+    "epochs_trained": 100
+  },
+  {
+    "name": "bs_21",
+    "config": {
+      "n_qubits": 5,
+      "n_layers": 2,
+      "encoding_type": "angle",
+      "entanglement": "linear",
+      "learning_rate": 0.05,
+      "batch_size": 32,
+      "epochs": 100,
+      "validation_split": 0.2,
+      "early_stopping_patience": 15
+    },
+    "train": {
+      "accuracy": 0.7125,
+      "auc": 0.6923076923076922
+    },
+    "val": {
+      "accuracy": 0.95,
+      "auc": 0.9393939393939394
+    },
+    "test": {
+      "accuracy": 0.71,
+      "auc": 0.6362
+    },
+    "epochs_trained": 100
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "config": {
+    "n_qubits": 5,
+    "n_layers": 3,
+    "encoding_type": "angle",
+    "entanglement": "circular",
+    "learning_rate": 0.05,
+    "batch_size": 16,
+    "epochs": 100,
+    "validation_split": 0.2,
+    "early_stopping_patience": 20
+  },
+  "test_accuracy": 0.7,
+  "test_auc": 0.7891999999999999,
+  "train_accuracy": 0.8,
+  "train_auc": 0.871875,
+  "signal_efficiency": 0.62,
+  "background_rejection": 0.78,
+  "epochs_trained": 28,
+  "confusion_matrix": [
+    [
+      39,
+      11
+    ],
+    [
+      19,
+      31
+    ]
+  ]
+}
