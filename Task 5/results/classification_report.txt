@@ -1,0 +1,14 @@
+QGNN Classification Report
+==================================================
+
+Test Accuracy: 0.4500
+Test AUC: 0.4912
+
+              precision    recall  f1-score   support
+
+       Gluon       0.00      0.00      0.00        21
+       Quark       0.46      0.95      0.62        19
+
+    accuracy                           0.45        40
+   macro avg       0.23      0.47      0.31        40
+weighted avg       0.22      0.45      0.29        40

@@ -1,0 +1,38 @@
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    QUANTUM GRAPH NEURAL NETWORK (QGNN)                       ║
+║                         Circuit Architecture                                  ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║                                                                              ║
+║  Configuration:                                                              ║
+║    • Qubits: 8 (one per selected particle)                              ║
+║    • Layers: 2 (data re-uploading)                                        ║
+║    • Features per particle: 3 (Δη, Δφ, log_pT)                          ║
+║                                                                              ║
+║  Layer Structure (repeated 2x):                                          ║
+║  ┌────────────────────────────────────────────────────────────────────────┐  ║
+║  │  1. FEATURE ENCODING                                                   │  ║
+║  │     ├─ Rx(Δη_i): Encode relative rapidity                             │  ║
+║  │     ├─ Ry(Δφ_i): Encode relative azimuthal angle                      │  ║
+║  │     └─ Rz(log_pT_i): Encode log transverse momentum                   │  ║
+║  │                                                                        │  ║
+║  │  2. VARIATIONAL ROTATION (trainable)                                   │  ║
+║  │     ├─ Ry(θ_i): Y-rotation with learned parameter                     │  ║
+║  │     └─ Rz(φ_i): Z-rotation with learned parameter                     │  ║
+║  │                                                                        │  ║
+║  │  3. GRAPH ENTANGLEMENT                                                 │  ║
+║  │     └─ CZ(q_i, q_j): Controlled-Z on k-NN edges                       │  ║
+║  └────────────────────────────────────────────────────────────────────────┘  ║
+║                                                                              ║
+║  Measurement:                                                                ║
+║    • Observable: Z-expectation on each qubit                                 ║
+║    • Output: [8 expectation values] → Classical MLP → Classification     ║
+║                                                                              ║
+║  Trainable Parameters: 32 (variational rotations)              ║
+║                                                                              ║
+║  Graph Structure:                                                            ║
+║    • k-NN graph with k=4 in (η, φ) space                                    ║
+║    • Entanglement topology reflects particle proximity                       ║
+║    • Physically motivated: nearby particles are correlated                   ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
