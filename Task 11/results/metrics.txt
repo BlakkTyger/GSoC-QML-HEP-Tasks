@@ -1,0 +1,26 @@
+Task 11: PQC Embedding Results
+========================================
+
+Configuration:
+  Qubits: 5
+  PQC Layers: 3
+  MLP Hidden Dims: [32, 64]
+  Samples: 1024
+  Epochs: 30
+  Learning Rate: 0.005
+
+Results:
+  Best Test Loss (MSE): 0.0541
+  Final Train Loss: 0.0464
+  Final Test Loss: 0.0541
+
+Per-Target MSE:
+  x: 0.0086
+  sin(x): 0.0023
+  cos(x): 0.0026
+  x²: 0.2229
+
+Baseline Comparison:
+  Baseline Loss: 0.5397
+  Our Best Loss: 0.0541
+  Improvement: 90.0%

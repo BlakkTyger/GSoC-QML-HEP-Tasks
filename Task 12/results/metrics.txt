@@ -1,0 +1,27 @@
+Task 12: PQC Embedding with RL (PPO) Results
+=============================================
+
+Configuration:
+  Algorithm: PPO
+  Qubits: 5
+  PQC Layers: 3
+  Hidden Dim: 128
+  Episodes: 500
+  Steps per Episode: 128
+  LR Actor: 0.001
+  LR Critic: 0.003
+
+Results:
+  Best Training MSE: 0.7407
+  Final Eval MSE: 1.0438
+
+Per-Target MSE:
+  x: 1.3071
+  sin(x): 0.6629
+  cos(x): 0.1421
+  x²: 2.0631
+
+Comparison:
+  Task 11 Baseline (Supervised): 0.5397
+  Task 11 Best (Supervised): 0.0541
+  Task 12 (RL/PPO): 1.0438

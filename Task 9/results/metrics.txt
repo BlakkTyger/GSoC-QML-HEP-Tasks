@@ -1,0 +1,27 @@
+============================================================
+Kolmogorov-Arnold Network - MNIST Classification Results
+============================================================
+
+MODEL CONFIGURATION
+----------------------------------------
+Total Parameters: 2,802,954
+Trainable Parameters: 2,802,954
+
+TRAINING RESULTS
+----------------------------------------
+Epochs: 15
+Final Train Loss: 0.0128
+Final Train Accuracy: 99.83%
+Final Val Loss: 0.1227
+Final Val Accuracy: 96.78%
+Best Val Accuracy: 96.78%
+
+TEST RESULTS
+----------------------------------------
+Test Accuracy: 97.17%
+
+BASELINE COMPARISON
+----------------------------------------
+Baseline (Task 9.ipynb): 96.40%
+Our Model: 97.17%
+Difference: +0.77%

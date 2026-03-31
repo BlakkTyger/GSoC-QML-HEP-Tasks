@@ -1,0 +1,35 @@
+============================================================
+Z₂ × Z₂ EQUIVARIANT QNN EXPERIMENT RESULTS
+============================================================
+
+Date: 2026-03-31 12:20:20
+
+Configuration:
+  Data points: 400
+  Threshold: 0.05
+  Epochs: 100
+  Learning rate: 0.01
+
+------------------------------------------------------------
+STANDARD QNN
+------------------------------------------------------------
+  Parameters: 12
+  Train Accuracy: 91.56%
+  Test Accuracy: 88.75%
+  Test Precision: 88.75%
+  Test F1: 94.04%
+
+------------------------------------------------------------
+EQUIVARIANT QNN (Z₂ × Z₂)
+------------------------------------------------------------
+  Parameters: 9
+  Train Accuracy: 91.56%
+  Test Accuracy: 88.75%
+  Test Precision: 88.75%
+  Test F1: 94.04%
+
+============================================================
+SUMMARY
+============================================================
+Parameter reduction: 25.0%
+Both models achieve similar accuracy.

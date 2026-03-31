@@ -1,0 +1,27 @@
+============================================================
+Vision Transformer - MNIST Classification Results
+============================================================
+
+MODEL CONFIGURATION
+----------------------------------------
+Total Parameters: 205,962
+Trainable Parameters: 205,962
+
+TRAINING RESULTS
+----------------------------------------
+Epochs: 15
+Final Train Loss: 0.1071
+Final Train Accuracy: 96.64%
+Final Val Loss: 0.0872
+Final Val Accuracy: 97.32%
+Best Val Accuracy: 97.42%
+
+TEST RESULTS
+----------------------------------------
+Test Accuracy: 97.58%
+
+BASELINE COMPARISON
+----------------------------------------
+Baseline (Task 8.ipynb): 97.44%
+Our Model: 97.58%
+Difference: +0.14%
