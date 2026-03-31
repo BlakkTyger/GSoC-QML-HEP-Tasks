@@ -1,0 +1,25 @@
+Task 6: Quantum Representation Learning - Results
+==================================================
+
+Date: 2026-03-31
+
+Configuration:
+  Classes: All 10 MNIST digits
+  Qubits: 9 (1 ancilla + 4 + 4)
+  Parameters: 16
+  Training samples: 4000
+  Epochs: 50
+  Learning Rate: 0.02
+  Optimizer: Adam
+  Preprocessing: Quadrant mean pooling
+
+Test Metrics:
+  Accuracy: 89.5%
+  Training Accuracy: 90%
+
+Architecture:
+  - Trainable encoding: θ = params[i,0] * x[i] + params[i,1]
+  - Image 1: RY rotations
+  - Image 2: RX rotations
+  - SWAP test for fidelity measurement
+  - Contrastive loss: label*(1-fid)² + (1-label)*fid²
