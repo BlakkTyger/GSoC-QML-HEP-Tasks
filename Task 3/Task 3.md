@@ -1,0 +1,31 @@
+# Task III: Open Task
+
+## Problem Statement
+
+Please comment on quantum computing or quantum machine learning. You can also comment on one quantum algorithm or one quantum software you are familiar with. You can also suggest methods you think are good and you would like to work on. Please use your own understanding. Comments copied from the internet will not be considered.
+
+## Quantum Graph Neural Networks & QCGNN
+
+Quantum computing excites me not just as a theoretical playground but because of what it promises for problems where classical methods genuinely hit a wall. My GSoC proposal focuses on QGNNs for jet tagging at the LHC, but the more I've sat with this architecture, especially QCGNN, the more I think its real power shows up in domains outside particle physics too.
+
+The core intuition behind a Graph Neural Network is beautiful in its simplicity: not all data is a flat table or a grid of pixels. Molecules, protein structures, social networks, particle collision events: these are fundamentally relational. The nodes matter, but so do the edges between them. Classical GNNs capture this well, but they struggle as graphs grow large because the number of pairwise interactions explodes. This is exactly where the quantum version becomes interesting.
+
+What QCGNN does cleverly is use the Index Register in superposition. This means, instead of visiting each node sequentially and computing interactions one by one, the quantum circuit processes all node relationships simultaneously through entanglement. The Uniform State Oracle initializes this superposition, and then controlled encoding maps each particle's features conditionally. You're essentially asking the quantum system to "hold" the entire graph structure in its state at once. This uses quantum parallelism in order to process all node relationships simultaneously.
+
+### Application: Drug Discovery and Molecular Simulation
+This is the application I find myself thinking about most. Molecules are graphs: atoms are nodes, bonds are edges, and the properties of a molecule emerge from how these elements interact. Classical GNNs like SchNet or DimeNet have made real progress here, but molecular property prediction hits a fundamental problem: quantum chemistry is expensive. Computing the ground state energy of even moderately large molecules using methods like DFT (Density Functional Theory) and various Quantum Approximation Algorithms requires approximations that introduce errors.
+
+A QGNN operating on a molecular graph could, in principle, capture quantum correlations between atoms more naturally than a classical network, because the model itself lives in a quantum Hilbert space. The electron cloud around a molecule isn't classical; it's inherently a quantum object. Using a quantum circuit to represent and process it feels more honest to the underlying physics.
+
+Using something like the Lorentz-equivariant design philosophy, but adapted for molecular symmetries would be specifically interesting. Molecules have rotational and translational symmetry (the SO(3) group, roughly), just as particle physics has Lorentz symmetry. The idea of encoding invariant features before they enter the quantum circuit, like distances between atoms, bond angles, torsional angles, rather than raw Cartesian coordinates, should make the model more physically principled and more data-efficient. You'd need far fewer examples to learn meaningful representations if your model already "knows" that rotating a benzene ring doesn't change its properties.
+
+### The Sparse Graph Problem
+One thing I've become genuinely curious about through writing this proposal is the sparse graph construction question. When you build a complete graph over all particles in a jet (or all atoms in a molecule), you're implicitly saying every pair of particles talks to every other. But that's often not physically motivated. In a molecule, an atom primarily interacts with its neighbors; long-range interactions exist but decay. In a jet, local substructure, the clustering of soft particles around hard cores, is what distinguishes a top quark jet from a gluon jet. This motivates us to explore graph construction algorithms which do not construct complete or dense graphs, but sparse graphs based on some physical properties of the system. One of the most basic algorithm is the k-NN graph algorithm, where we connect each node to its k nearest neighbors. 
+
+So k-NN graphs aren't just cheaper. They might actually be better physics. The fact that they reduce index qubits from log₂(N²) to log₂(k) is a bonus. This connects to something I believe more broadly: the best quantum ML models won't just be quantum versions of classical ones. They'll be quantum models shaped by the symmetries and locality properties of the physical system they're modeling.
+
+### PennyLane
+I've worked more extensively with Qiskit through the IBM summer school, but for this project I've been moving toward PennyLane, and I think the choice matters. PennyLane's differentiable programming model, where quantum circuits slot naturally into automatic differentiation pipelines, makes hybrid classical-quantum training feel like one coherent system rather than two systems duct-taped together. It's also hardware-agnostic, which matters when you're doing simulation at this scale and may eventually want to test on real backends.
+What I want to get better at, and what I think will define the next generation of useful QML, is understanding the barren plateau problem more concretely, not just as a theoretical obstacle but as something you navigate through architecture choices. Pre-training, as the transfer learning component of my proposal explores, might be one path out: if you can initialize your variational parameters in a region of parameter space with useful gradients, you sidestep the exponential vanishing problem that makes naive random initialization so brittle. That's a hypothesis worth testing rigorously.
+
+The honest answer is that we don't yet know whether QGNNs will outperform classical GNNs at any practically relevant scale. But the questions being asked, about symmetry, locality, expressibility, and transfer, are good questions regardless of the answer. And working through them carefully, on real datasets, with properly matched baselines, is how the field actually makes progress.
